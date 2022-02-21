@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --h1-font-: "Source Sans Pro", sans-serif;
+  --main-font: "Source Sans Pro", sans-serif;
+  --button-red: #cc1f0b;
+  --button-gray: #f2f2f2;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 100%;
+  background-color: #ffffff;
+  font-family: var(--main-font);
+  line-height: 3.5vh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding-left: 0em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: var(--h1-font-);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.punch {
+  font-weight: 700;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+/* HEADER */
+header {
+  padding-top: 1.5rem;
+}
+
+.searchbar {
+  padding-left: 1rem;
+}
+
+/* *BUTTONS* */
+.button {
+  border-radius: 20px;
+  padding-top: 0.3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.3rem;
+  border: none;
+}
+button {
+  border-radius: 20px;
+  padding-top: 0.3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.3rem;
+  border: none;
+}
+.logIn {
+  background-color: var(--button-red);
+  margin-right: 10px;
+  color: #fff;
+}
+.save {
+  background-color: var(--button-red);
+  color: #fff;
+}
+.signUp {
+  background-color: #f2f2f2;
+  color: #000;
+}
+.directions {
+  background-color: #f2f2f2;
+  color: #000;
+}
+.header-buttons {
+  padding-right: 1rem;
+}
+
+/* ****HERO CONTENT**** */
+@media only screen and (min-width: 600px) {
+  .heroRecipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+  }
+  .heroImage {
+    grid-column: 2/-1;
+  }
+  .ingredients {
+    grid-column: 2/-1;
+  }
+}
+/* figcaption {
+  padding-top: 0.75rem;
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+figure:first-child p {
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #838383;
+  margin-left: 5.75rem;
+}
+#hero-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero-rating {
+  justify-content: flex-start;
+} */
+/* MAIN GRID */
+#recipeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.gridHeader {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+.seeAll {
+  padding-left: 1rem;
+}
