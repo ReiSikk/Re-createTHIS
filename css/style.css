@@ -70,10 +70,13 @@ input.searchbar {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-right: 0.5rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
   color: #212121;
   display: block;
   width: 100%;
+}
+.search {
+  padding-left: 1rem;
 }
 
 /* *BUTTONS* */
@@ -119,20 +122,15 @@ button:active {
 }
 
 /* ****HERO CONTENT**** */
-@media only screen and (min-width: 600px) {
-  .heroRecipe {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem;
-  }
-  .heroImage {
-    grid-column: 2/-1;
-    max-width: 50%;
-  }
-  .ingredients {
-    grid-column: 2/-1;
-  }
+
+.heroImage {
+  grid-column: 2/-1;
+  max-width: 50%;
 }
+.ingredients {
+  grid-column: 2/-1;
+}
+
 figcaption {
   padding-top: 0.75rem;
   font-family: var(--main-font);
@@ -148,7 +146,9 @@ figure:first-child p {
 }
 .heroRecipe {
   padding-top: 1.5rem;
-  padding-left: 1rem;
+}
+.ingredients-center {
+  padding-left: 2rem;
 }
 .heroImage {
   text-align: center;
@@ -247,6 +247,11 @@ figure:first-child p {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
+article:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+  transition: all 0.25s;
+}
 .gridHeader {
   display: flex;
   text-align: center;
@@ -300,16 +305,24 @@ figure:first-child p {
 
 .gridPic .overlay {
   position: absolute;
-  height: 4rem;
-  margin-top: -9vh;
+  display: block;
+  bottom: 4px;
+  height: 3rem;
   border-radius: 10px;
-  background-color: #000;
-  opacity: 0.4;
-  width: 75%;
+  background-color: rgba(0, 0, 0, 0.584);
+  opacity: 1;
+  width: 100%;
   z-index: 1;
 }
-
-.gridPic p {
+.gridPic {
+  position: relative;
+}
+.overlayTitle {
+  font-size: 1rem;
+  z-index: 2;
+  color: #fff;
+}
+/* .gridPic p {
   position: absolute;
   color: #fff;
   font-size: 1.2rem;
@@ -320,7 +333,7 @@ figure:first-child p {
   opacity: 1;
   margin-top: -8vh;
   max-width: 100%;
-}
+} */
 
 /* *****FOOOOOOTER */
 .footer-wrapper {
@@ -332,17 +345,29 @@ figure:first-child p {
 }
 /* ****MEDIA QUERIES  */
 @media only screen and (min-width: 600px) {
-  .heroRecipe {
-    display: grid;
+  /*  .heroRecipe {
+       display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2rem;
-  }
+  } */
   .heroImage {
-    grid-column: 2/-1;
-    max-width: 50%;
+    margin: auto;
+    max-width: 66vw;
+  }
+  .heroRecipe {
+    display: block;
+    margin: auto;
   }
   .ingredients {
     grid-column: 2/-1;
+  }
+  .gridHeader {
+    grid-column: 1/-1;
+  }
+  .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -360,30 +385,11 @@ figure:first-child p {
   .gridHeader {
     grid-column: 1/-1;
   }
-  .heroRecipe {
-    grid-template-columns: 1fr 1fr;
-    grid-column: 1/-1;
-  }
-  nav {
-    display: flex;
-    text-align: center;
-    flex-direction: column-reverse;
-    justify-content: space-around;
-  }
-  nav h1 {
-    padding-top: 1rem;
-  }
-  nav form {
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .header-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
 
+  .heroImage {
+    margin: auto;
+    max-width: 66vw;
+  }
   img {
     width: 75vw;
     height: auto;
@@ -403,5 +409,22 @@ figure:first-child p {
     justify-content: center;
     grid-column: 2/3;
     padding-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  nav h1 {
+    padding-top: 1rem;
+  }
+  nav form {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  nav {
+    display: flex;
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
   }
 }
