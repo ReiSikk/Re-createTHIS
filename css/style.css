@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --h1-font-: "Source Sans Pro", sans-serif;
+  --main-font: "Source Sans Pro", sans-serif;
+  --button-red: #cc1f0b;
+  --button-gray: #f2f2f2;
+  --gray-text: #838383;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 100%;
+  background-color: #ffffff;
+  font-family: var(--main-font);
+  line-height: 3.5vh;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding-left: 0em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: var(--h1-font-);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.punch {
+  font-weight: 700;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+/* HEADER */
+header {
+  padding-top: 1.5rem;
+}
+
+.searchbar {
+  padding-left: 1rem;
+}
+
+/* *BUTTONS* */
+.button {
+  border-radius: 20px;
+  padding-top: 0.3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.3rem;
+  border: none;
+}
+button {
+  border-radius: 20px;
+  padding-top: 0.3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.3rem;
+  border: none;
+}
+.logIn {
+  background-color: var(--button-red);
+  margin-right: 10px;
+  color: #fff;
+}
+
+.signUp {
+  background-color: #f2f2f2;
+  color: #000;
+}
+.directions {
+  background-color: #f2f2f2;
+  color: #000;
+}
+.header-buttons {
+  padding-right: 1rem;
+}
+
+/* ****HERO CONTENT**** */
+@media only screen and (min-width: 600px) {
+  .heroRecipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+  }
+  .heroImage {
+    grid-column: 2/-1;
+    max-width: 50%;
+  }
+  .ingredients {
+    grid-column: 2/-1;
+  }
+}
+figcaption {
+  padding-top: 0.75rem;
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+figure:first-child p {
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #838383;
+  margin-left: 5.75rem;
+}
+.heroRecipe {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}
+#hero-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  border-bottom: 1px solid var(--button-gray);
+  padding-bottom: 1rem;
+}
+.hero-rating {
+  justify-content: flex-start;
+}
+.hero-rating span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.hero-rating li {
+  font-weight: 300;
+  text-align: center;
+}
+.hero-icon ul li:first-child {
+  text-align: center;
+}
+.hero-icon li {
+  font-weight: 300;
+}
+.hero-icon {
+  border-left: solid 1px var(--button-gray);
+  padding-left: 1rem;
+}
+.hero-ing .bold {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.hero-ing li:last-child {
+  font-weight: 300;
+}
+.hero-ing {
+  border-left: solid 1px var(--button-gray);
+  padding-left: 1rem;
+}
+
+/* **INGREDIENTS LIST */
+.ingredients {
+  padding-top: 3rem;
+}
+.ingredients p {
+  line-height: 4vh;
+}
+.serves p {
+  background-color: var(--button-gray);
+  border-radius: 20px;
+}
+.ingredientsButtons {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+
+.directionsBtn {
+  color: #000;
+}
+.directionsBtn span {
+  text-align: center;
+  margin-left: 5px;
+  font-weight: 600;
+}
+.save {
+  background-color: var(--button-red);
+  color: #fff;
+  font-weight: 600;
+}
+/* MAIN GRID */
+#recipeGrid {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.gridHeader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+.seeAll {
+  padding-left: 1rem;
+  color: var(--gray-text);
+}
+.gridHeader svg {
+  margin-top: 4px;
+}
+.gridHeader span {
+  padding-left: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .heroRecipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+  }
+  .heroImage {
+    grid-column: 2/-1;
+    max-width: 50%;
+  }
+  .ingredients {
+    grid-column: 2/-1;
+  }
+}
+@media only screen and (max-width: 599px) {
+  #recipeGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 1rem;
+  }
+  .gridElem {
+    padding-top: 1rem;
+    grid-column: 1/-1;
+    margin: auto;
+  }
+  .gridHeader {
+    grid-column: 1/-1;
+  }
+  .heroRecipe {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+  }
+
+  img {
+    width: 75vw;
+    height: auto;
+  }
+}
