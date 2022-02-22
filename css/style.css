@@ -52,19 +52,29 @@ header {
   padding-top: 1.5rem;
 }
 
-.searchbar {
-  padding-left: 1rem;
+input[type="text"] {
+  max-width: 100%;
+  min-height: auto;
+  border: solid 1px black;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  background-color: var(--button-gray);
+}
+input.searchbar {
+  border-color: transparent;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 2rem;
+  color: #212121;
+  display: block;
+  width: 100%;
 }
 
 /* *BUTTONS* */
-.button {
-  border-radius: 20px;
-  padding-top: 0.3rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.3rem;
-  border: none;
-}
+
 button {
   border-radius: 20px;
   padding-top: 0.3rem;
@@ -73,6 +83,18 @@ button {
   padding-bottom: 0.3rem;
   border: none;
 }
+button:visited {
+  color: #000;
+}
+button:hover {
+  transform: translateY(2px);
+  transition: linear all 0.3s;
+  cursor: pointer;
+}
+button:active {
+  color: #000;
+}
+
 .logIn {
   background-color: var(--button-red);
   margin-right: 10px;
@@ -110,8 +132,8 @@ figcaption {
   padding-top: 0.75rem;
   font-family: var(--main-font);
   font-size: 1.5rem;
-  margin-left: 2rem;
 }
+
 figure:first-child p {
   padding-top: 0.5rem;
   text-transform: uppercase;
@@ -122,6 +144,24 @@ figure:first-child p {
 .heroRecipe {
   padding-top: 1.5rem;
   padding-left: 1rem;
+}
+.heroImage {
+  text-align: center;
+}
+.ingredients {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.serves {
+  padding-right: 0.75rem;
+}
+.serves p {
+  padding-top: 0.2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.2rem;
 }
 #hero-info {
   display: flex;
@@ -212,6 +252,9 @@ figure:first-child p {
   padding-left: 1rem;
   color: var(--gray-text);
 }
+.seeAll:hover {
+  text-decoration: underline;
+}
 .gridHeader svg {
   margin-top: 4px;
 }
@@ -250,6 +293,23 @@ figure:first-child p {
   .heroRecipe {
     grid-template-columns: 1fr 1fr;
     grid-column: 1/-1;
+  }
+  nav {
+    display: flex;
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+  nav h1 {
+    padding-top: 1rem;
+  }
+  nav form {
+    padding-top: 1.5rem;
+  }
+  .header-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   img {

@@ -9,17 +9,19 @@
   </head>
   <body>
     <div id="wrapper">
-      <main>
         <header>
           <nav>
-            <div class="searchbar">Searchbar</div>
+            <form class="searchform">
+            <input class="searchbar" type="text" placeholder="Search by recipes or ingredients">
+</form>
             <h1><span class="punch">Punch</span>Fork</h1>
             <div class="header-buttons">
-              <a class="button logIn" href="#">Log in</a>
-              <a class="button signUp" href="#">Sign up</a>
+              <button class="logIn">Log in</button>
+              <button class="signUp">Sign up</button>
             </div>
-          </nav>
+         </nav>
         </header>
+        <main>
         <section class="heroRecipe">
           <div class="heroImage">
             <figure>
@@ -63,6 +65,7 @@
             <h2>Ingredients</h2>
             <div class="serves">
               <p>Serves 8-12</p>
+              </div>
             </div>
             <p><strong>1 </strong>large purple cabbage (about 3 1/2 pounds)</p>
             <p><strong>2 tablespoons </strong> of vegetable oil</p>
@@ -73,7 +76,7 @@
               <strong>2 cups </strong>homemade or store-bought barbecue sauce
             </p>
             <div class="ingredientsButtons">
-              <button class="directionsBtn">
+              <button type="button" class="directionsBtn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -95,7 +98,7 @@
                   /></svg
                 ><span>Directions</span>
               </button>
-              <button class="save">
+              <button type="button" class="save">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
